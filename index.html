@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Interview Coach</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>AI Interview Coach</h1>
+            <p>Practice. Record. Improve.</p>
+        </header>
+
+        <main class="interview-box">
+
+            <div class="setup">
+
+                <label for="role">Select Interview Role</label>
+
+                <select id="role">
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                </select>
+
+                <button id="startInterview">
+                    Start Interview
+                </button>
+
+            </div>
+
+
+            <div class="interview-section" id="interviewSection">
+
+                <div class="question-info">
+                    <span id="questionNumber">Question 1 of 5</span>
+                </div>
+
+                <div class="question-box">
+                    <h2 id="question">
+                        Tell me about yourself.
+                    </h2>
+                </div>
+
+
+                <div class="video-container">
+
+                    <video id="videoPreview" autoplay muted></video>
+
+                    <div class="camera-message" id="cameraMessage">
+                        Camera preview will appear here
+                    </div>
+
+                </div>
+
+
+                <p class="recording-status" id="recordingStatus">
+                    Ready to record
+                </p>
+
+
+                <div class="buttons">
+
+                    <button id="startRecording" class="record-btn">
+                        🔴 Start Recording
+                    </button>
+
+                    <button id="stopRecording" class="stop-btn" disabled>
+                        ⏹ Stop Recording
+                    </button>
+
+                </div>
+
+
+                <button id="submitAnswer" class="submit-btn" disabled>
+                    ✓ Submit Answer
+                </button>
+                <!-- Answer input for AI evaluation -->
+<div class="answer-box">
+    <label for="answerText">Type your answer:</label>
+
+    <textarea
+        id="answerText"
+        rows="5"
+        placeholder="Type your interview answer here..."
+    ></textarea>
+</div>
+
+<!-- AI feedback section -->
+<div id="feedbackBox" style="display: none;">
+    <h3>AI Feedback</h3>
+
+    <p>
+        <strong>Score:</strong>
+        <span id="score">-</span>/10
+    </p>
+
+    <p><strong>Feedback:</strong></p>
+    <p id="feedbackText"></p>
+
+    <p><strong>Improvement Suggestion:</strong></p>
+    <p id="improvementText"></p>
+</div>
+
+
+                <button id="nextQuestion" class="next-btn" disabled>
+                    Next Question
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

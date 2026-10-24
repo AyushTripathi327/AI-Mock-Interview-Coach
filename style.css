@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 600px;
+    min-height: 650px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+.interview-box {
+    padding: 25px;
+}
+
+.setup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.setup label {
+    font-weight: bold;
+    color: #333;
+}
+
+.setup select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#startInterview {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#startInterview:hover {
+    background: #0056b3;
+}
+
+.interview-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.question-info {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.question-box {
+    background: #f1f3f5;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.question-box h2 {
+    font-size: 20px;
+    color: #222;
+}
+
+.video-container {
+    width: 100%;
+    height: 300px;
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+#videoPreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.camera-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.recording-status {
+    text-align: center;
+    margin: 15px 0;
+    color: #555;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buttons button,
+.submit-btn,
+.next-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.record-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.stop-btn {
+    background: #555;
+    color: white;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 12px;
+    background: #28a745;
+    color: white;
+}
+
+.next-btn {
+    width: 100%;
+    margin-top: 12px;
+    background: #007bff;
+    color: white;
+}
+
+.submit-btn:disabled,
+.next-btn:disabled,
+.stop-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #218838;
+}
+
+.next-btn:hover:not(:disabled) {
+    background: #0056b3;
+}
